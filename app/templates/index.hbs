@@ -2,8 +2,10 @@
 
 <ul>
   {{#each model as |topic|}}
-     <!-- <li>{{topic.title}} | {{topic.details}}</li> -->
-     {{topic-tile topic=topic}}
+     <li class="list-group-item">
+       {{#link-to 'topic' topic.id}}{{topic-tile topic=topic}}{{/link-to}}
+     </li>
+
   {{/each}}
 </ul>
 
