@@ -26,6 +26,10 @@ export default Ember.Route.extend({
       });
       thread.save();
       this.transitionTo('topic');
+    },
+    destroyThread(thread) {
+      thread.destroyRecord();
+      this.transitionTo('topic');
     }
   }
 });
