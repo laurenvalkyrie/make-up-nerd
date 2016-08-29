@@ -14,7 +14,6 @@ export default Ember.Component.extend({
       };
       this.set('editTopicForm', false);
       this.sendAction('edit', topic, params);
-
     }
   }
 });

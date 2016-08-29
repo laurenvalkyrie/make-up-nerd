@@ -7,13 +7,13 @@ export default Ember.Component.extend({
       this.set('addNewTopic', true);
     },
 
-    save() {
+    saveTopic() {
       var params = {
         title: this.get('title'),
         details: this.get('details')
       };
       this.set('addNewTopic', false);
-      this.sendAction('newTopicSave', params);
+      this.sendAction('saveTopic', params);
       this.set('title', "");
       this.set('details', "");
     }

@@ -1,5 +1,13 @@
 <h2>More information about {{model.title}}'s {{model.details}}:</h2>
 
-{{edit-topic topic=model edit="edit"}}
 
 {{topic-detail topic=model destroyTopic="destroyTopic"}}
+
+<h2>Threads</h2>
+{{add-thread saveThread="saveThread" topic=model}}
+
+<ul>
+  {{#each model.threads as |thread|}}
+    {{thread-tile thread=thread}}
+  {{/each}}
+</ul>

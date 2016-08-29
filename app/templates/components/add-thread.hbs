@@ -1,0 +1,26 @@
+{{#if addNewThread}}
+<h1>New Thread</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="heading">Thread Heading</label>
+        {{input value=heading id="heading" class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content:</label>
+        {{input value=content id="content" class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author:</label>
+        {{input value=author id="author" class="form-control"}}
+      </div>
+
+
+      <button type="button" class="btn btn-default" {{action 'saveThread'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button type="button" class="btn btn-default" {{action 'threadFormShow'}}>New Thread</button>
+{{/if}}
