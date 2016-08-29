@@ -1,3 +1,5 @@
-{{topic-tile topic=topic}}
-<h2>{{model.title}}</h2>
-<h4>{{model.details}}</h4>
+<h2>More information about {{model.title}}'s {{model.details}}:</h2>
+
+{{edit-topic topic=model edit="edit"}}
+
+{{topic-detail topic=model destroyTopic="destroyTopic"}}
