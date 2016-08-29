@@ -17,6 +17,15 @@ export default Ember.Route.extend({
         return topic.save();
       });
       this.transitionTo('topic', params.topic);
+    },
+    editThread(thread, params) {
+      Object.keys(params).forEach(function(key) {
+        if (params[key] !== undefined) {
+        thread.set(key,params[key]);
+        }
+      });
+      thread.save();
+      this.transitionTo('topic');
     }
   }
 });

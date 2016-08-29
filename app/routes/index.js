@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('topic');
+    return Ember.RSVP.hash({
+      topics: this.store.findAll('topic'),
+      threads: this.store.findAll('thread')
+    });
   },
 
   actions: {
