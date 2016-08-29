@@ -1,0 +1,11 @@
+<h1> Welcome to Makeup Nerd </h1>
+
+<ul>
+  {{#each model as |topic|}}
+     <li>{{topic.title}} | {{topic.details}}</li>
+  {{/each}}
+</ul>
+
+<hr>
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
