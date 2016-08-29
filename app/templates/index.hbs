@@ -3,7 +3,7 @@
 <ul>
   {{#each model as |topic|}}
      <li class="list-group-item">
-       {{#link-to 'topic' topic.id}}{{topic-tile topic=topic}}{{/link-to}}
+       {{topic-tile topic=topic edit="edit"}}
      </li>
 
   {{/each}}
