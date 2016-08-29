@@ -1,0 +1,84 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+$main-font: 'Josefin Sans', sans-serif;
+$main-color: white;
+$pink-color: #f3228a;
+$green-color: #22f38b;
+
+body{
+  font-family: $main-font;
+}
+//application.hbs
+.navbar {
+    background: 	$green-color;
+  .navbar-header{
+    height: 80px;
+    .navbar-brand {
+      color: $pink-color;
+      h1 {
+        font-size: 2em;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px){
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.navbar-right {
+  li {
+    font-size: 1.5em;
+    a {
+      color: $main-color;
+      &:before,
+      &:after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+      }
+      &:before {
+        margin-right: 10px;
+        content: '{';
+        -webkit-transform: translate(20px);
+        -moz-transform: translate(20px);
+        transform: translate(20px);
+      }
+      &:after {
+        margin-left: 10px;
+        content: '}';
+        -webkit-transform: translate(-20px);
+        -moz-transform: translate(-20px);
+        transform: translate(-20px);
+      }
+      &:hover:before,
+      &:hover:after,
+      &:focus:before,
+      &:focus:after {
+        opacity: 1;
+        -webkit-transform: translate(0px);
+        -moz-transform: translate(0px);
+        transform: translate(0px);
+      }
+    }
+  }
+}
+
+
+//index.hbs
+  .jumbotron {
+    background-position: center;
+    background: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 350px;
+    @media only screen and (max-width: 768px){
+    background-image: url('images/sm-main-logo.png');
+    }
+    @media only screen and (min-width: 769px){
+      background-image: url('images/main-logo.png');
+    }
+  }
