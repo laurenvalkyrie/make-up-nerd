@@ -162,3 +162,15 @@ body{
       }
     }
   }
+
+//edit-topic modal
+
+.modal-header {
+  h3 {
+    color: red;
+  }
+  p {
+    text-transform: uppercase;
+  }
+  text-align: center;
+}
