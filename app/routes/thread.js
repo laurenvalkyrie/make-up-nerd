@@ -10,14 +10,18 @@ export default Ember.Route.extend({
       this.transitionTo('topic');
     },
     saveResponse(args) {
+      console.log(args);
         var newResponse = this.store.createRecord('response', args);
+        var thread = args.thread;
+        thread.get('responses').addObject(newResponse);
         newResponse.save();
+        thread.save();
         this.transitionTo('thread');
     },
-    editResponse(response, critters) {
-      Object.keys(critters).forEach(function(key) {
-        if (critters[key] !== undefined) {
-        response.set(key,critters[key]);
+    editResponse(response, criteria) {
+      Object.keys(criteria).forEach(function(key) {
+        if (criteria[key] !== undefined) {
+        response.set(key,criteria[key]);
         }
       });
       response.save();

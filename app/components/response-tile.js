@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    editResponse(response, critters) {
-      this.sendAction('editResponse', response, critters);
+    editResponse(response, criteria) {
+      this.sendAction('editResponse', response, criteria);
     },
     delete(response) {
       if (confirm('Are you sure you want to delete this response?')) {

@@ -8,14 +8,14 @@ export default Ember.Component.extend({
     },
 
     editResponse(response) {
-      var critters = {
+      var criteria = {
         label: this.get('label'),
         text: this.get('text'),
         visitor: this.get('visitor'),
         thread: this.get('thread'),
       };
       this.set('editResponseForm', false);
-      this.sendAction('editResponse', response, critters);
+      this.sendAction('editResponse', response, criteria);
     }
   }
 });
