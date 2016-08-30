@@ -20,5 +20,18 @@
       "heading": "What's your nude?",
       "content": "This thread is for persons seeking their perfect matching shade of foundation...",
       "author": "Harper Lee"
-    }]
+    }],
+    "responses": [{
+        "label": "Rainy Days",
+        "text": "Something about the rain in Spain raining on a plain?",
+        "visitor": "Lauren Posey"
+      }, {
+        "label": "Sunny Days",
+        "text": "The world spins madly on in a spiral spewing sewage",
+        "visitor": "Raven the Rogue"
+      }, {
+        "label": "Burning Man",
+        "text": "Burn the man. Destroy the establishment",
+        "visitor": "Hawkeye Clark"
+      }]
 }
