@@ -1,0 +1,24 @@
+{{#if editThreadForm}}
+  <h3>Edit {{thread.heading}}</h3>
+  <div class="edit">
+    <form>
+      <div class="form-group">
+        <label for="heading">Thread Heading: </label>
+        {{input value=heading id="heading" placeholder=thread.heading}}
+      </div>
+      <div class="form-group">
+        <label for="content">Content: </label>
+        {{input value=content id="content" placeholder=thread.content}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author: </label>
+        {{input value=author id="author" placeholder=thread.author}}
+      </div>
+
+      <button type="button" class="btn btn-outline btn-primary" {{action 'editThread' thread}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button type="button" class="btn btn-outline btn-warning btn-lg" {{action 'editThreadForm'}}>Edit a Thread</button>
+{{/if}}

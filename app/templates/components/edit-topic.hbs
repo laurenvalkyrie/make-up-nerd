@@ -1,0 +1,19 @@
+{{#if editTopicForm}}
+  <h3>Edit {{topic.title}}</h3>
+  <div class="edit">
+    <form>
+      <div class="form-group">
+        <label for="title">Topic Title: </label>
+        {{input value=title id="title" placeholder=topic.title}}
+      </div>
+      <div class="form-group">
+        <label for="details">Details: </label>
+        {{input value=details id="details" placeholder=topic.details}}
+      </div>
+
+      <button type="button" class="btn btn-outline btn-primary" {{action 'edit' topic}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button type="button" class="btn btn-outline btn-warning btn-lg" {{action 'editTopicForm'}}>Edit a Topic</button>
+{{/if}}

@@ -2,9 +2,16 @@
 
 <ul>
   {{#each model as |topic|}}
-     <li>{{topic.title}} | {{topic.details}}</li>
+     <li class="list-group-item">
+       {{topic-tile topic=topic edit="edit"}}
+     </li>
+
   {{/each}}
 </ul>
+
+<div class="newTopic">
+  {{add-topic saveTopic="saveTopic"}}
+</div>
 
 <hr>
 {{#link-to 'about'}}About{{/link-to}}
