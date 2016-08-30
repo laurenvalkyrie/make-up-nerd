@@ -1,7 +1,7 @@
 <h1> Welcome to Makeup Nerd </h1>
 
 <ul>
-  {{#each model as |topic|}}
+  {{#each model.topics as |topic|}}
      <li class="list-group-item">
        {{topic-tile topic=topic edit="edit"}}
      </li>

@@ -8,6 +8,6 @@
 
 <ul>
   {{#each model.threads as |thread|}}
-    {{thread-tile thread=thread editThread="editThread" destroyThread="destroyThread"}}
+    {{#link-to 'thread' thread.id}}{{thread-tile thread=thread editThread="editThread" destroyThread="destroyThread"}}{{/link-to}}
   {{/each}}
 </ul>
