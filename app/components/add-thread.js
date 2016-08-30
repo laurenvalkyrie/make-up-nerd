@@ -11,6 +11,7 @@ export default Ember.Component.extend({
         heading: this.get('heading'),
         content: this.get('content'),
         author: this.get('author'),
+        image: this.get('image'),
         topic: this.get('topic'),
       };
       this.set('addNewThread', false);
