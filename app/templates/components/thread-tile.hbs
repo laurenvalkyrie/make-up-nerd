@@ -1,0 +1,8 @@
+<div>
+  <h3>{{thread.heading}}</h3>
+  <p>From: {{thread.author}}</p>
+  <p>{{thread.content}}</p>
+  <hr>
+  {{edit-thread thread=thread editThread="editThread"}}
+  <button {{action 'deleteThread' thread}}>Delete</button>
+</div>
