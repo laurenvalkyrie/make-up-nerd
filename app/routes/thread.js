@@ -13,6 +13,10 @@ export default Ember.Route.extend({
         var newResponse = this.store.createRecord('response', args);
         newResponse.save();
         this.transitionTo('thread');
-      },
+    },
+    destroyResponse(response) {
+      response.destroyRecord();
+      this.transitionTo('thread');
+    }
   }
 });
