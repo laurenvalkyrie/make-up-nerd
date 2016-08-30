@@ -1,0 +1,164 @@
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+$main-font: 'Josefin Sans', sans-serif;
+$main-color: white;
+$pink-color: #FF4081;
+$green-color: #A7FFEB;
+
+body{
+  font-family: $main-font;
+}
+//application.hbs
+.navbar {
+    background: 	$green-color;
+  .navbar-header{
+    height: 80px;
+    .navbar-brand {
+      color: $pink-color;
+        p {
+          font-size: 2em;
+          margin-top: 10px;
+          @media only screen and (max-width: 768px){
+            margin-top: 20px;
+          }
+        }
+    }
+  }
+  @media only screen and (max-width: 768px){
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.navbar-right {
+  li {
+    font-size: 1.5em;
+    a {
+      color: $main-color;
+      &:before,
+      &:after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+      }
+      &:before {
+        margin-top: 10px;
+        margin-right: 10px;
+        content: url('images/xs-pink-lips.png');
+        -webkit-transform: translate(20px);
+        -moz-transform: translate(20px);
+        transform: translate(20px);
+      }
+      &:after {
+        margin-left: 10px;
+        content: url('images/xs-pink-lips.png');
+        -webkit-transform: translate(-20px);
+        -moz-transform: translate(-20px);
+        transform: translate(-20px);
+      }
+      &:hover:before,
+      &:hover:after,
+      &:focus:before,
+      &:focus:after {
+        opacity: 1;
+        -webkit-transform: translate(0px);
+        -moz-transform: translate(0px);
+        transform: translate(0px);
+      }
+    }
+  }
+}
+
+
+//index.hbs
+  .jumbotron {
+    background-position: center;
+    background: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    &:hover {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
+    @media only screen and (max-width: 768px){
+    background-image: url('images/sm-glasses-logo.png');
+    height: 250px;
+    }
+    @media only screen and (min-width: 769px){
+      background-image: url('images/glasses-logo.png');
+      height: 350px;
+    }
+  }
+
+  .topics {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+      .topic-card {
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        align-self: center;
+        width: 25vw;
+        height: 20vh;
+        @media only screen and (max-width: 600px){
+          width: 90vw;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        @media only screen and (min-width: 601px){
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        @media only screen and (min-width: 700px){
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      .questionTile {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      .topic-title{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-size: 50px;
+        text-align: center;
+        background: $green-color;
+        border-bottom: 1px solid black;
+        h3{
+          &:hover {
+            transform:scale(1.2);
+          }
+        }
+      }
+      .topic-description {
+        text-align: center;
+      }
+    }
+  }

@@ -1,8 +1,12 @@
-<h1> Welcome to Makeup Nerd </h1>
 
-<ul>
+<div class="jumbotron">
+</div>
+
+
+
+<ul class="topics">
   {{#each model.topics as |topic|}}
-     <li class="list-group-item">
+     <li class="list-group-item topic-card">
        {{topic-tile topic=topic edit="edit"}}
      </li>
 
