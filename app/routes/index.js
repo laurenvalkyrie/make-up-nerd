@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       topics: this.store.findAll('topic'),
-      threads: this.store.findAll('thread')
+      threads: this.store.findAll('thread'),
+      responses: this.store.findAll('response'),
     });
   },
 

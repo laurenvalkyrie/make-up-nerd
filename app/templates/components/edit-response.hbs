@@ -1,0 +1,24 @@
+{{#if editResponseForm}}
+  <h3>Edit {{response.label}}</h3>
+  <div class="edit">
+    <form>
+      <div class="form-group">
+        <label for="label">Response Label: </label>
+        {{input value=label id="label" placeholder=thread.label}}
+      </div>
+      <div class="form-group">
+        <label for="text">Text: </label>
+        {{input value=text id="text" placeholder=thread.text}}
+      </div>
+
+      <div class="form-group">
+        <label for="visitor">Visitor: </label>
+        {{input value=visitor id="visitor" placeholder=thread.visitor}}
+      </div>
+
+      <button type="button" class="btn btn-outline btn-primary" {{action 'editResponse' response}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button type="button" class="btn btn-outline btn-warning btn-lg" {{action 'editResponseForm'}}>Edit a Response</button>
+{{/if}}

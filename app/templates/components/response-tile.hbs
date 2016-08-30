@@ -1,0 +1,6 @@
+<h3>{{response.label}}</h3>
+<p>{{response.text}}</p>
+<p>{{response.visitor}}</p>
+{{edit-response response=response editResponse="editResponse"}}
+
+<button {{action 'delete' response}}>Delete</button>
