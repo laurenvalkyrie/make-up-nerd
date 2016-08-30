@@ -14,6 +14,15 @@ export default Ember.Route.extend({
         newResponse.save();
         this.transitionTo('thread');
     },
+    editResponse(response, critters) {
+      Object.keys(critters).forEach(function(key) {
+        if (critters[key] !== undefined) {
+        response.set(key,critters[key]);
+        }
+      });
+      response.save();
+      this.transitionTo('thread');
+    },
     destroyResponse(response) {
       response.destroyRecord();
       this.transitionTo('thread');

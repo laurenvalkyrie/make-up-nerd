@@ -4,6 +4,6 @@
 {{add-response saveResponse="saveResponse" thread=model}}
 <ul>
   {{#each model.responses as |response|}}
-    {{response-tile response=response destroyResponse="destroyResponse"}}
+    {{response-tile response=response editResponse="editResponse" destroyResponse="destroyResponse"}}
   {{/each}}
 </ul>
