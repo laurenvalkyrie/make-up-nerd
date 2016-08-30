@@ -1,12 +1,18 @@
 
-<div class="jumbotron">  
+<div class="jumbotron">
 </div>
 
-<ul>
-  {{#each model as |topic|}}
-     <li>{{topic.title}} | {{topic.details}}</li>
-  {{/each}}
-</ul>
+
+  <ul class="topics">
+    <div class="topic-card">
+    {{#each model as |topic|}}
+       <li><div class="topic-title"><h3>{{topic.title}}</h3></div>
+      <br>
+      <div class="topic-description"><p>{{topic.details}}</p></div></li>
+    {{/each}}
+    </div>
+  </ul>
+
 
 <hr>
 {{#link-to 'about'}}About{{/link-to}}

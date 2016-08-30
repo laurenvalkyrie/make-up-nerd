@@ -1,8 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
 $main-font: 'Josefin Sans', sans-serif;
 $main-color: white;
-$pink-color: #f3228a;
-$green-color: #22f38b;
+$pink-color: #FF4081;
+$green-color: #A7FFEB;
 
 body{
   font-family: $main-font;
@@ -14,16 +14,19 @@ body{
     height: 80px;
     .navbar-brand {
       color: $pink-color;
-      h1 {
-        font-size: 2em;
-      }
+        p {
+          font-size: 2em;
+          margin-top: 10px;
+          @media only screen and (max-width: 768px){
+            margin-top: 20px;
+          }
+        }
     }
   }
   @media only screen and (max-width: 768px){
     text-align: center;
     display: flex;
     justify-content: center;
-
   }
 }
 
@@ -41,15 +44,16 @@ body{
         transition: transform 0.3s, opacity 0.2s;
       }
       &:before {
+        margin-top: 10px;
         margin-right: 10px;
-        content: '{';
+        content: url('images/xs-pink-lips.png');
         -webkit-transform: translate(20px);
         -moz-transform: translate(20px);
         transform: translate(20px);
       }
       &:after {
         margin-left: 10px;
-        content: '}';
+        content: url('images/xs-pink-lips.png');
         -webkit-transform: translate(-20px);
         -moz-transform: translate(-20px);
         transform: translate(-20px);
@@ -74,11 +78,61 @@ body{
     background: cover;
     background-repeat: no-repeat;
     background-color: white;
-    height: 350px;
     @media only screen and (max-width: 768px){
-    background-image: url('images/sm-main-logo.png');
+    background-image: url('images/sm-glasses-logo.png');
+    height: 250px;
     }
     @media only screen and (min-width: 769px){
-      background-image: url('images/main-logo.png');
+      background-image: url('images/glasses-logo.png');
+      height: 350px;
     }
+  }
+
+  .topics {
+    list-style: none;
+    padding-left: 0;
+    @media only screen and (max-width: 680px){
+      width: 90vw;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media only screen and (min-width: 681px){
+      width: 100vw;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media only screen and (min-width: 700px){
+
+      padding-left: 10px;
+      padding-right: 10px;
+      .topic-card {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    }
+
+      li {
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px;
+        align-self: center;
+        height: 15vh;
+        .topic-title{
+          padding-top: 20px;
+          padding-bottom: 20px;
+          text-size: 50px;
+          text-align: center;
+          background: $green-color;
+          border-bottom: 1px solid black;
+        }
+        .topic-description {
+          text-align: center;
+          text-size: 2em;
+        }
+      }
   }
