@@ -78,6 +78,27 @@ body{
     background: cover;
     background-repeat: no-repeat;
     background-color: white;
+    &:hover {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+    @keyframes shake {
+      10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+    }
     @media only screen and (max-width: 768px){
     background-image: url('images/sm-glasses-logo.png');
     height: 250px;
@@ -91,48 +112,47 @@ body{
   .topics {
     list-style: none;
     padding-left: 0;
-    @media only screen and (max-width: 680px){
-      width: 90vw;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    @media only screen and (min-width: 681px){
-      width: 100vw;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    @media only screen and (min-width: 700px){
-
-      padding-left: 10px;
-      padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
       .topic-card {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-    }
-
-      li {
         margin-bottom: 20px;
         border: 1px solid black;
         border-radius: 5px;
         padding: 5px;
         align-self: center;
-        height: 15vh;
-        .topic-title{
-          padding-top: 20px;
-          padding-bottom: 20px;
-          text-size: 50px;
-          text-align: center;
-          background: $green-color;
-          border-bottom: 1px solid black;
+        width: 25vw;
+        height: 20vh;
+        @media only screen and (max-width: 600px){
+          width: 90vw;
+          padding-left: 10px;
+          padding-right: 10px;
         }
-        .topic-description {
-          text-align: center;
-          text-size: 2em;
+        @media only screen and (min-width: 601px){
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        @media only screen and (min-width: 700px){
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      .topic-title{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-size: 50px;
+        text-align: center;
+        background: $green-color;
+        border-bottom: 1px solid black;
+        h3{
+          &:hover {
+            transform:scale(1.2);
+          }
         }
       }
+      .topic-description {
+        text-align: center;
+      }
+    }
   }

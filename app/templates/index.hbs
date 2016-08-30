@@ -4,13 +4,11 @@
 
 
   <ul class="topics">
-    <div class="topic-card">
     {{#each model as |topic|}}
-       <li><div class="topic-title"><h3>{{topic.title}}</h3></div>
+       <li class="topic-card"><div class="topic-title"><h3>{{topic.title}}</h3></div>
       <br>
-      <div class="topic-description"><p>{{topic.details}}</p></div></li>
+      <div class="topic-description"><h4>{{topic.details}}</h4></div></li>
     {{/each}}
-    </div>
   </ul>
 
 
