@@ -4,16 +4,16 @@
     <form>
       <div class="form-group">
         <label for="label">Response Label: </label>
-        {{input value=label id="label" placeholder=thread.label}}
+        {{input value=label id="label" placeholder=thread.label class="form-control"}}
       </div>
       <div class="form-group">
         <label for="text">Text: </label>
-        {{input value=text id="text" placeholder=thread.text}}
+        {{input value=text id="text" placeholder=thread.text class="form-control"}}
       </div>
 
       <div class="form-group">
         <label for="visitor">Visitor: </label>
-        {{input value=visitor id="visitor" placeholder=thread.visitor}}
+        {{input value=visitor id="visitor" placeholder=thread.visitor class="form-control"}}
       </div>
 
       <button type="button" class="btn btn-outline btn-primary" {{action 'editResponse' response}}>Save</button>

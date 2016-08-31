@@ -2,10 +2,13 @@
   <h3>{{thread.heading}}</h3>
   <p>From: {{thread.author}}</p>
   <p>{{thread.content}}</p>
-  <p>{{thread.image}}</p>
+  <img src="{{thread.image}}" alt="this is a makeup image">
+
   {{thread-popularity thread}}
   <button class="btn btn-default" {{action 'addToFav' thread}}><span class="glyphicon glyphicon-heart"></span> </button>
-  <hr>
+
   {{edit-thread thread=thread editThread="editThread"}}
-  <button {{action 'deleteThread' thread}}>Delete</button>
+
+  <button {{action 'deleteThread' thread}} class="btn btn-danger">Delete</button>
 </div>
+<hr>
