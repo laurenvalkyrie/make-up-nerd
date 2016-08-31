@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('contact');
   this.route('topic', {path: '/topic/:topic_id'});
   this.route('thread', {path: '/thread/:thread_id'});
+  this.route('favorites', {path: '/favoriteThreads'});
 });
 
 export default Router;
