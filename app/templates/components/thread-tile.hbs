@@ -4,6 +4,7 @@
   <p>{{thread.content}}</p>
   <p>{{thread.image}}</p>
   {{thread-popularity thread}}
+  <button class="btn btn-default" {{action 'addToFav' thread}}><span class="glyphicon glyphicon-heart"></span> </button>
   <hr>
   {{edit-thread thread=thread editThread="editThread"}}
   <button {{action 'deleteThread' thread}}>Delete</button>

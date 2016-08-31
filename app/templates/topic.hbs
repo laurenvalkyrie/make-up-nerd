@@ -1,13 +1,15 @@
-<h2>More information about {{model.title}}'s {{model.details}}:</h2>
+<h2>All information about {{model.title}}</h2>
 
 
 {{topic-detail topic=model destroyTopic="destroyTopic"}}
 
 <h2>Threads</h2>
-{{add-thread saveThread="saveThread" topic=model}}
 
 <ul>
   {{#each model.threads as |thread|}}
-    {{#link-to 'thread' thread.id}}{{thread-tile thread=thread editThread="editThread" destroyThread="destroyThread"}}{{/link-to}}
+    {{#link-to 'thread' thread.id}}Click here for more information about this thread.{{/link-to}}
+    {{thread-tile thread=thread editThread="editThread" destroyThread="destroyThread" addToFav="addToFav"}}
   {{/each}}
 </ul>
+
+{{add-thread saveThread="saveThread" topic=model}}
