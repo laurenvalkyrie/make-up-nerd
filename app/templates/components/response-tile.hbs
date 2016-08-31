@@ -1,6 +1,8 @@
-<h3>{{response.label}}</h3>
-<p>{{response.text}}</p>
-<p>{{response.visitor}}</p>
+<li>
+  <h3>{{response.label}}</h3>
+  <p>{{response.text}}</p>
+  <p>{{response.visitor}}</p>
+</li>
 {{edit-response response=response editResponse="editResponse"}}
-
-<button {{action 'delete' response}}>Delete</button>
+<button class="btn btn-delete"{{action 'delete' response}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Delete</button>
+<hr>

@@ -15,5 +15,6 @@ export default Ember.Component.extend({
     addToFav(thread) {
       this.get('favoriteThreads').add(thread);
     }
+
   }
 });

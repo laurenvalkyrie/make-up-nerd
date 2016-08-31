@@ -2,17 +2,17 @@
   <div class="topicForm">
     <form>
       <div class="form-group">
-        <label for="title">Topic Title: </label>
-        <h3>{{input value=title id="title" placeholder="your topic"}}</h3>
+        <label for="title"><h3>Topic Title:</h3> </label>
+        <h4>{{input value=title id="title" placeholder="Topic title"}}</h4>
       </div>
       <div class="form-group">
-        <label for="details">Details: </label>
-        {{input value=details id="details" placeholder="your name"}}
+        <label for="details"><h3>Details:</h3> </label>
+        <h4>{{textarea class="form-control" rows="2" value=details id="details" placeholder="Topic details"}}</h4>
       </div>
 
-      <button type="button" class="btn btn-outline btn-primary" {{action 'saveTopic'}}>Save</button>
+      <button type="button" class="btn btn-outline btn-success" {{action 'saveTopic'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button type="button" class="btn btn-outline btn-success btn-lg" {{action 'topicFormShow'}}>Add a Topic</button>
+  <button type="button" class="btn btn-success" {{action 'topicFormShow'}}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add a Topic</button>
 {{/if}}

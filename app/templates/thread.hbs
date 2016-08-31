@@ -1,10 +1,19 @@
-<h2>{{model.heading}} {{model.content}}:</h2>
-<h4>{{model.image}}</h4>
+
+<div class="hexagon">
+  <div class="topic-header">
+    <h2 class="full-topic">{{model.heading}} {{model.content}}:</h2>
+    <h4>{{model.image}}</h4>
+  </div>
+</div>
+
 
 <h2>Responses</h2>
-{{add-response saveResponse="saveResponse" thread=model}}
-<ul>
+<ul class="bullets">
   {{#each model.responses as |response|}}
     {{response-tile response=response editResponse="editResponse" destroyResponse="destroyResponse"}}
   {{/each}}
 </ul>
+
+
+
+{{add-response saveResponse="saveResponse" thread=model}}
