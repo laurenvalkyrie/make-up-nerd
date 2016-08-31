@@ -1,25 +1,11 @@
-<<<<<<< HEAD
 <div class="hexagon">
   <div class="topic-header">
     <p class="info">More information about {{model.title}}'s</p> <p class="full-topic"> {{model.details}}</p>
     {{topic-detail topic=model destroyTopic="destroyTopic"}}
   </div>
 </div>
-=======
 <h2>All information about {{model.title}}</h2>
->>>>>>> master
-
-
-
-<<<<<<< HEAD
-
-
 <h2 class="topic-title">Threads</h2>
-
-=======
-<h2>Threads</h2>
->>>>>>> master
-
 <ul>
   {{#each model.threads as |thread|}}
     {{#link-to 'thread' thread.id}}Click here for more information about this thread.{{/link-to}}
