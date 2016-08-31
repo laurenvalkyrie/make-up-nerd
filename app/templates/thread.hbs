@@ -1,6 +1,8 @@
+
 <div class="hexagon">
   <div class="topic-header">
     <h2 class="full-topic">{{model.heading}} {{model.content}}:</h2>
+    <h4>{{model.image}}</h4>
   </div>
 </div>
 
@@ -11,6 +13,7 @@
     {{response-tile response=response editResponse="editResponse" destroyResponse="destroyResponse"}}
   {{/each}}
 </ul>
+
 
 
 {{add-response saveResponse="saveResponse" thread=model}}
