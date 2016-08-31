@@ -3,6 +3,7 @@
 </div>
 
 <h2 class="section-title">Tutorials</h2>
+<hr>
 <div class="row">
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
@@ -27,6 +28,10 @@
 </div>
 
 <h2 class="section-title">Makeup Topics</h2>
+<div class="newTopic">
+  {{add-topic saveTopic="saveTopic"}}
+</div>
+<hr>
 <ul class="topics">
   {{#each model.topics as |topic|}}
      <li class="list-group-item topic-card">
@@ -36,9 +41,8 @@
   {{/each}}
 </ul>
 
-<div class="newTopic">
-  {{add-topic saveTopic="saveTopic"}}
-</div>
+
+
 
 <!-- <hr>
 {{#link-to 'about'}}About{{/link-to}}

@@ -8,12 +8,10 @@
 
 
 <h2>Responses</h2>
+{{add-response saveResponse="saveResponse" thread=model}}
+<hr>
 <ul class="bullets">
   {{#each model.responses as |response|}}
     {{response-tile response=response editResponse="editResponse" destroyResponse="destroyResponse"}}
   {{/each}}
 </ul>
-
-
-
-{{add-response saveResponse="saveResponse" thread=model}}

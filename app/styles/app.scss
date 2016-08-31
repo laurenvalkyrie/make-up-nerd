@@ -166,6 +166,13 @@ body{
 
 //edit-topic modal
 
+.edit-modal {
+  .modal-content {
+    padding: 20px;
+  }
+}
+
+
 .modal-header {
   h3 {
     color: red;
@@ -200,34 +207,69 @@ body{
     padding: 10px;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    .btn-delete {
+      background: #F44336;
+      display: none;
+    }
+    &:hover .btn-delete {
+      display: inline;
+      transition: opacity 0.5s linear;
+    }
   }
   .info {
-    @media only screen and (max-width: 600px){
-      font-size: 80%;
-    }
-    @media only screen and (min-width: 601px){
+    @media only screen and (max-width: 500px){
       font-size: 1em;
     }
-    @media only screen and (min-width: 773px){
-      font-size: 1.5em;
-    }
-    border-bottom: 3px solid $main-color;
-    text-align: center;
-  }
-  .full-topic {
-    @media only screen and (max-width: 600px){
-      font-size: 100%;
-    }
-    @media only screen and (min-width: 601px){
+    @media only screen and (min-width: 501px){
       font-size: 1.5em;
     }
     @media only screen and (min-width: 773px){
       font-size: 2em;
     }
+    border-bottom: 3px solid $main-color;
+    text-align: center;
+  }
+  .full-topic {
+    @media only screen and (max-width: 500px){
+      font-size: 1.5em;
+    }
+    @media only screen and (min-width: 501px){
+      font-size: 2em;
+    }
+    @media only screen and (min-width: 773px){
+      font-size: 2.5em;
+    }
     text-align: center;
   }
 }
 
+//threads on topic.hbs
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  .btn{
+    border-left: 2px solid white;
+  }
+  .btn-add {
+    background: $pink-color;
+  }
+  .btn-edit {
+    background: $main-color;
+    border: 1px solid black;
+  }
+  .btn-delete {
+    background: #F44336;
+  }
+}
+.btn-fav {
+  margin-top: 0;
+}
+//threads responses
  .bullets {
   list-style-image: url('images/xs-pink-lips.png');
 }
+
+    .btn-delete{
+      background: #F44336;
+    }

@@ -3,6 +3,8 @@
   <p>{{response.text}}</p>
   <p>{{response.visitor}}</p>
 </li>
-{{edit-response response=response editResponse="editResponse"}}
-<button class="btn btn-delete"{{action 'delete' response}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Delete</button>
+<div class="btn-group" role="group" aria-label="Basic example">
+  {{edit-response response=response editResponse="editResponse"}}
+  <button class="btn btn-sm btn-delete"{{action 'delete' response}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+</div>
 <hr>

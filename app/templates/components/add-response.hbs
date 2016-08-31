@@ -18,9 +18,9 @@
       </div>
 
 
-      <button type="button" class="btn btn-default" {{action 'saveResponse'}}>Save</button>
+      <button type="button" class="btn btn-success" {{action 'saveResponse'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button type="button" class="btn btn-default" {{action 'responseFormShow'}}>New Response</button>
+  <button type="button" class="btn btn-success" {{action 'responseFormShow'}}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>New Response</button>
 {{/if}}
