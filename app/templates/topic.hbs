@@ -1,14 +1,15 @@
 <div class="hexagon">
   <div class="topic-header">
-    <p class="info">More information about</p> <p class="full-topic">{{model.title}}'s {{model.details}}</p>
+    <p class="info">More information about {{model.title}}'s</p> <p class="full-topic"> {{model.details}}</p>
+    {{topic-detail topic=model destroyTopic="destroyTopic"}}
   </div>
 </div>
 
 
 
-{{topic-detail topic=model destroyTopic="destroyTopic"}}
 
-<h2>Threads</h2>
+
+<h2 class="topic-title">Threads</h2>
 
 
 <ul>

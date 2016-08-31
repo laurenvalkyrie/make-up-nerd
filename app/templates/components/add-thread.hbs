@@ -18,9 +18,9 @@
       </div>
 
 
-      <button type="button" class="btn btn-default" {{action 'saveThread'}}>Save</button>
+      <button type="button" class="btn btn-success" {{action 'saveThread'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button type="button" class="btn btn-default" {{action 'threadFormShow'}}>New Thread</button>
+  <button type="button" class="btn btn-success" {{action 'threadFormShow'}}><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Thread</button>
 {{/if}}
