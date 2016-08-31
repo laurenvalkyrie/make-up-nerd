@@ -1,13 +1,20 @@
-<h2>More information about {{model.title}}'s {{model.details}}:</h2>
+<div class="hexagon">
+  <div class="topic-header">
+    <p class="info">More information about</p> <p class="full-topic">{{model.title}}'s {{model.details}}</p>
+  </div>
+</div>
+
 
 
 {{topic-detail topic=model destroyTopic="destroyTopic"}}
 
 <h2>Threads</h2>
-{{add-thread saveThread="saveThread" topic=model}}
+
 
 <ul>
   {{#each model.threads as |thread|}}
     {{#link-to 'thread' thread.id}}{{thread-tile thread=thread editThread="editThread" destroyThread="destroyThread"}}{{/link-to}}
   {{/each}}
 </ul>
+
+{{add-thread saveThread="saveThread" topic=model}}

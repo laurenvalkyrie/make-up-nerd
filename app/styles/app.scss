@@ -182,3 +182,31 @@ body{
   float: left;
   margin-top: 10%;
 }
+
+//topic.hbs
+.hexagon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .topic-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: lighten(#BDBDBD, 15%);
+    width: 70vw;
+    height: 20vh;
+    padding: 10px;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  .info {
+    font-size: 1.5em;
+    border-bottom: 3px solid $main-color;
+  }
+  .full-topic {
+    font-size: 2em;
+    text-align: center;
+  }
+}
