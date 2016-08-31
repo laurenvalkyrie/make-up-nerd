@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   favoriteThreads: Ember.inject.service(),
+  
+  totalResoponses: Ember.computed('thread.responses.length', function() {
+    return this.get('thread.responses.length');
+  }),
+
   actions: {
     editThread(thread, params) {
       this.sendAction('editThread', thread, params);
