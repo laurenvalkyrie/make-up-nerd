@@ -9,16 +9,16 @@
         <form>
           <div class="form-group">
             <label for="label">Title: </label>
-            {{input value=label id="label" placeholder=thread.label}}
+            {{input value=label id="label" placeholder=response.label}}
           </div>
           <div class="form-group">
             <label for="text">Text: </label>
-            {{input value=text id="text" placeholder=thread.text}}
+            {{textarea class="form-control" rows="1" value=text id="text" placeholder=response.text}}
           </div>
 
           <div class="form-group">
             <label for="visitor">Visitor: </label>
-            {{input value=visitor id="visitor" placeholder=thread.visitor}}
+            {{input value=visitor id="visitor" placeholder=response.visitor}}
           </div>
 
           <button type="button" class="btn btn-outline btn-primary" data-dismiss="modal" {{action 'editResponse' response}}>Save</button>

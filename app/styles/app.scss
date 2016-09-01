@@ -114,18 +114,18 @@ body{
     padding-left: 0;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
-      .topic-card {
+      .list-group-item  {
         margin-bottom: 20px;
         border: 1px solid black;
         border-radius: 5px;
         padding: 5px;
         align-self: center;
         width: 25vw;
-        height: 20vh;
-        position: relative;
+        height: 26vh;
+        // position: relative;
         @media only screen and (max-width: 600px){
           width: 90vw;
           padding-left: 10px;
@@ -139,29 +139,30 @@ body{
           padding-left: 10px;
           padding-right: 10px;
         }
+      }
       .questionTile {
         a {
           text-decoration: none;
           color: black;
         }
-      }
-      .topic-title{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        text-size: 50px;
-        text-align: center;
-        background: $green-color;
-        border-bottom: 1px solid black;
-        h3{
+        .topic-title {
+          padding-top: 2%;
+          padding-bottom: 2%;
+          background: $green-color;
+          text-size: 50px;
+          text-align: center;
           &:hover {
-            transform:scale(1.2);
+            transform:scale(1.1);
           }
         }
+        .topic-description {
+          text-align: center;
+        }
       }
-      .topic-description {
-        text-align: center;
+      .btn-default {
+        float: right;
+        margin-top: 2%;
       }
-    }
   }
 
 //edit-topic modal
@@ -171,8 +172,6 @@ body{
     padding: 20px;
   }
 }
-
-
 .modal-header {
   h3 {
     color: red;
@@ -183,12 +182,6 @@ body{
   text-align: center;
 }
 
-.btn-default {
-  border-radius: 5px;
-  position: absolute;
-  float: left;
-  margin-top: 10%;
-}
 
 //topic.hbs
 .hexagon{
@@ -202,9 +195,9 @@ body{
     align-items: center;
     flex-direction: column;
     background: lighten(#BDBDBD, 15%);
-    width: 70vw;
-    height: 20vh;
-    padding: 10px;
+    width: 90%;
+    height: 70%;
+    padding: 10%;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     .btn-delete {
@@ -231,16 +224,24 @@ body{
   }
   .full-topic {
     @media only screen and (max-width: 500px){
-      font-size: 1.5em;
+      font-size: 1em;
     }
     @media only screen and (min-width: 501px){
-      font-size: 2em;
+      font-size: 1.5em;
     }
     @media only screen and (min-width: 773px){
-      font-size: 2.5em;
+      font-size: 2em;
     }
     text-align: center;
   }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
 }
 
 //threads on topic.hbs
