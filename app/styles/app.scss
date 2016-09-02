@@ -124,7 +124,7 @@ body{
         padding: 5px;
         align-self: center;
         width: 25vw;
-        height: 26vh;
+        height: 28vh;
         // position: relative;
         @media only screen and (max-width: 600px){
           width: 90vw;
@@ -274,3 +274,23 @@ body{
     .btn-delete{
       background: #F44336;
     }
+//star glyphicon
+.glyphicon-star {
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+  color: $green-color;
+  font-size: 40px;
+  @keyframes roll {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+.card-block {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
