@@ -2,7 +2,7 @@
 <div class="jumbotron">
 </div>
 
-<h2 class="section-title">Tutorials</h2>
+<h2 class="section-title">{{#link-to 'find'}}Tutorials{{/link-to}}</h2>
 <hr>
 <div class="row">
   <div class="col-xs-6 col-md-3">
@@ -12,38 +12,32 @@
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="assets/images/makeup.jpg" alt="...">
+      <img src="assets/images/Mermaid.jpeg" alt="...">
     </a>
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="assets/images/makeup.jpg" alt="...">
+      <img src="assets/images/flirty-eyes.jpg" alt="...">
     </a>
   </div>
   <div class="col-xs-6 col-md-3">
     <a href="#" class="thumbnail">
-      <img src="assets/images/makeup.jpg" alt="...">
+      <img src="assets/images/blush.jpg" alt="...">
     </a>
   </div>
 </div>
 
-<h2 class="section-title">Makeup Topics</h2>
+<h2 class="section-title" id="topics">Makeup Topics</h2>
 <div class="newTopic">
   {{add-topic saveTopic="saveTopic"}}
 </div>
 <hr>
 <ul class="topics">
   {{#each model.topics as |topic|}}
-     <li class="list-group-item topic-card">
+     <li class="list-group-item">
        {{topic-tile topic=topic edit="edit"}}
      </li>
 
   {{/each}}
 </ul>
-
-
-
-
-<!-- <hr>
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Click here to contact us.{{/link-to}} -->
+<hr>

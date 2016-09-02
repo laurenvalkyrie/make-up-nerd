@@ -1,11 +1,10 @@
-
+{{#link-to 'index'}}<span class="glyphicon glyphicon-chevron-left"></span>Back{{/link-to}}
 <div class="hexagon">
   <div class="topic-header">
     <p class="info">More information about {{model.title}}'s</p> <p class="full-topic"> {{model.details}}</p>
     {{topic-detail topic=model destroyTopic="destroyTopic"}}
   </div>
 </div>
-
 <h2 class="topic-title">Threads</h2>
 {{add-thread saveThread="saveThread" topic=model}}
 <hr>
