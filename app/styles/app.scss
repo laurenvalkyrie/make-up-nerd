@@ -294,3 +294,13 @@ body{
   border-radius: 5px;
   padding: 10px;
 }
+
+.construction {
+  font-size: 20px;
+  color: red;
+  animation: blinker 2s linear infinite;
+  @keyframes blinker {
+  50% { opacity: 0.0; }
+}
+
+}
