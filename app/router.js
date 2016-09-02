@@ -12,6 +12,8 @@ Router.map(function() {
   this.route('topic', {path: '/topic/:topic_id'});
   this.route('thread', {path: '/thread/:thread_id'});
   this.route('favorites', {path: '/favoriteThreads'});
+  this.route('find');
+  this.route('my-ideas');
 });
 
 export default Router;
